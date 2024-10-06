@@ -2,10 +2,15 @@
 
 ## Consignes générales
 
+L'application devra être ergonomique et intuitive.
+
+La bibliothèque MatAngular devra être utilisée pour la mise en place des composants standards.
+
 ## Description fonctionnelle des pages
 
 ### Page de connexion
 
+<<<<<<< HEAD
 - La page de connexion est composé d'un champ 'login' ainsi que d'un champ 'mot de passe'.
 - Les 2 champs sont obligatoires et tant qu'ils ne sont pas renseigné le bouton de validation du formulaire doit être non cliquable.
 - Pour valider la connexion d'un utilisateur, le login et le mot de passe doivent être identiques.
@@ -16,14 +21,28 @@
 - Sur toute les pages, on retrouvera une `navbar` qui sera composée d'un menu burger qui affichera la liste des jeux disponibles sur la plateforme (pour le moment seul le SUDOKU est cliquable le reste est désactivé)
 - La `navbar` affichera aussi le pseudo du joueur connecté. Au clic sur le pseudo du joueur alors on est déconnecté.
 - On retrouvera un lien vers la page d'accueil et un autre lien vers la page des classements.
+=======
+ - La page de connexion est composé d'un champ 'login' ainsi que d'un champ 'mot de passe'.
+ - Les 2 champs sont obligatoires et tant qu'ils ne sont pas renseigné le bouton de validation du formulaire doit être non cliquable.
+ - Pour valider la connexion d'un utilisateur, le login et le mot de passe doivent être identiques.
+ - Si un utilisateur a déjà été identifié (mettre en place une mécanique de LocalStorage pour garder la session de l'utilisateur) alors on le redirigera directement sur la page d'accueil.
+>>>>>>> 8dbc210589ec8da1064db7e4b838dba9d744196b
 
 ### Page d'accueil
 
 ### Page classement
 
+La page classement permettra à l'utilisateur de consulter le classement :
+ - des joueurs en fonction de leur nombre de points
+ - des joueurs en fonction du nombre de jour (série) qu'ils ont joué
+
+Chaque classement devra être paginé.
+
 ### Page Sudoku
 
 ## Bonus
+
+1. Fournir un `.dockerfile` permettant de lancer l'application via Docker
 
 ## Ressources 
 
