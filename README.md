@@ -39,14 +39,31 @@ Chaque classement devra être paginé.
 
 ### Page Sudoku
 
+1. L'API permettant de récupérer une partie de Sudoku est accessible ici : https://sudoku-game-and-api.netlify.app/api/sudoku
+2. Voici la description de la réponse reçu (ce qui n'est pas décrit ici n'est pas à exploiter) : 
+ - le champ `data` contient la solution de la grille
+ - le champ `easy` contient les positions de départ de la grille. Les 0 représentent des cases vides.
+3. Sur la page, un utilisateur aura la possibilité de : 
+ - remplir le sudoku
+ - effectuer une validation de sa grille (ce qui augmentera le nombre d'indices utilisés par le joueur). Le nombre d'indices sera affiché sous le bouton `Vérifier`
+ - soumettre sa grille. A la soumission, un check sera effectué. En cas de check réussie, alors la grille sera validée avec 0 indice, sinon il n'y aura pas de soumission et le nombre d'indices sera incrémenté.
+4. La validation d'une partie se fera sur l'URL suivante : https://664ba07f35bbda10987d9f99.mockapi.io/api/game et devra respecter la nomenclature suivante :
+ - `date` : la date de la partie
+ - `playerName` : le pseudo du joueur
+ - `clues` : le nombre d'indices utilisés par le joueur
+
+NB : A chaque appel, une nouvelle partie vous sera proposée. Afin de pouvoir tenter la même partie, vous pouvez sauvegarder la partie reçu dans le LocalStorage
+
 ## Bonus
 
 1. Fournir un `.dockerfile` permettant de lancer l'application via Docker
+2. Pouvoir rejouer la même partie sur une même journée
 
 ## Ressources 
 
 1. API pour récupérer les classements : https://664ba07f35bbda10987d9f99.mockapi.io/api/users
 2. API pour récupérer le profil d'un utilisateur : https://664ba07f35bbda10987d9f99.mockapi.io/api/users/{user-id}
+3. API pour récupérer une partie de Sudoku : https://sudoku-game-and-api.netlify.app/api/sudoku
 3. Collection Postman avec toutes les routes APIs utilisées : https://www.postman.com/apside-clermont/iut/collection/4163533-68aa265a-23b3-484a-b900-f255c298b847/?action=share&creator=4163533
 
 NB : le champ `streak` correspond au nombre de jours d'affilé où le joueur a fini.
