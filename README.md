@@ -43,7 +43,8 @@ Chaque classement devra être paginé.
 2. Voici la description de la réponse reçu (ce qui n'est pas décrit ici n'est pas à exploiter) : 
  - le champ `data` contient la solution de la grille
  - le champ `easy` contient les positions de départ de la grille. Les 0 représentent des cases vides.
-3. Vous devrez gérer les erreurs et prévoir une partie par défaut :
+3. Vous devrez gérer les erreurs provenant de l'API.
+   En cas d'indisponibilité de celle-ci, vous trouverez ci-dessous un exemple de partie par défaut :
 
 ```
 {
@@ -95,11 +96,11 @@ Chaque classement devra être paginé.
 
 ```
    
-3. Sur la page, un utilisateur aura la possibilité de : 
+4. Sur la page, un utilisateur aura la possibilité de : 
  - remplir le sudoku
  - effectuer une validation de sa grille (ce qui augmentera le nombre d'indices utilisés par le joueur). Le nombre d'indices sera affiché sous le bouton `Vérifier`
  - soumettre sa grille. A la soumission, un check sera effectué. En cas de check réussie, alors la grille sera validée avec 0 indice, sinon il n'y aura pas de soumission et le nombre d'indices sera incrémenté.
-4. La validation d'une partie se fera sur l'URL suivante : https://664ba07f35bbda10987d9f99.mockapi.io/api/game et devra respecter la nomenclature suivante :
+5. La validation d'une partie se fera sur l'URL suivante : https://664ba07f35bbda10987d9f99.mockapi.io/api/game et devra respecter la nomenclature suivante :
  - `date` : la date de la partie
  - `playerName` : le pseudo du joueur
  - `clues` : le nombre d'indices utilisés par le joueur
@@ -111,6 +112,7 @@ NB : Chaque tableau du tableau de données représente une ligne dans la grille 
 
 1. Fournir un `.dockerfile` permettant de lancer l'application via Docker
 2. Pouvoir rejouer la même partie sur une même journée
+3. Pouvoir choisir la difficulté de la partie
 
 ## Ressources 
 
