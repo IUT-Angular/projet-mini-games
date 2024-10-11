@@ -39,7 +39,7 @@ Chaque classement devra être paginé.
 
 ### Page Sudoku
 
-1. L'API permettant de récupérer une partie de Sudoku est accessible ici : https://sudoku-game-and-api.netlify.app/api/sudoku
+1. L'API permettant de récupérer une partie de Sudoku est accessible ici : https://664ba07f35bbda10987d9f99.mockapi.io/api/sudoku/1
 2. Voici la description de la réponse reçu (ce qui n'est pas décrit ici n'est pas à exploiter) : 
  - le champ `data` contient la solution de la grille
  - le champ `easy` contient les positions de départ de la grille. Les 0 représentent des cases vides.
@@ -118,7 +118,7 @@ NB : Chaque tableau du tableau de données représente une ligne dans la grille 
 
 1. API pour récupérer les classements : https://664ba07f35bbda10987d9f99.mockapi.io/api/users
 2. API pour récupérer le profil d'un utilisateur : https://664ba07f35bbda10987d9f99.mockapi.io/api/users/{user-id}
-3. API pour récupérer une partie de Sudoku : https://sudoku-game-and-api.netlify.app/api/sudoku
+3. API pour récupérer une partie de Sudoku : https://664ba07f35bbda10987d9f99.mockapi.io/api/sudoku/1
 3. Collection Postman avec toutes les routes APIs utilisées : https://www.postman.com/apside-clermont/iut/collection/4163533-68aa265a-23b3-484a-b900-f255c298b847/?action=share&creator=4163533
 
 NB : le champ `streak` correspond au nombre de jours d'affilé où le joueur a fini.
